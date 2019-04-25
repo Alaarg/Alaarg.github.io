@@ -1,0 +1,445 @@
+$simplebg: #fff;
+$min-color: #fcca03;
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  height: 2000px;
+}
+
+.gotop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  background: $min-color;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.20);
+  z-index: 999999999;
+
+
+}
+
+.gotop.active {
+  display: none;
+
+}
+
+section {
+  margin: 25px 0;
+  padding: 15px;
+}
+
+.min_title_section {
+  margin-bottom: 50px;
+  color: $min-color;
+  margin-top: 25px;
+
+  h2 {
+    text-decoration: overline;
+  }
+}
+
+header {
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999999;
+  transition: 0.3s;
+
+  .top_logo {
+    display: inline-block;
+
+    img {
+      width: 130px;
+    }
+  }
+
+  nav {
+    display: inline-block;
+    transition: 0.3s;
+
+    ul li {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 20px;
+
+      a::before {
+        content: "";
+        top: 15px;
+        left: 0;
+        height: 2px;
+        width: 0%;
+        position: absolute;
+        background: $min-color;
+        transition: 0.3s;
+      }
+
+      a.active::before {
+        content: "";
+        top: 15px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background: $min-color;
+        transition: 0.3s;
+      }
+
+      a:hover::before {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    ul li a {
+      color: #fff;
+      position: relative;
+    }
+
+    ul li a:hover {
+      color: #fff;
+    }
+  }
+
+  .big_button {
+    height: 90px;
+    float: right;
+    line-height: 90px;
+    background: $min-color;
+    padding: 0 25px;
+  }
+
+  a.button_link {
+    margin-left: auto;
+  }
+
+  .big_button:hover {
+    color: $min-color;
+    background: #000;
+    transition: 0.3s;
+  }
+}
+
+header.active {
+  background: $simplebg;
+  transition: 0.3s;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.28);
+
+  nav ul li a {
+    color: #000;
+    position: relative;
+  }
+
+  nav ul li a:hover {
+    color: #000;
+  }
+}
+
+// ------about us------
+.about_us {
+  .about_us_text {
+    height: 350px;
+    padding: 10%;
+
+    h1 {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .about_us_img {
+    background: url(../images/about-bg.jpg) center/cover no-repeat;
+    height: 350px;
+    width: 100%;
+    box-shadow: 0 0 3px 1px $min-color;
+  }
+}
+
+// ------services---
+.serv {
+  background-color: $min-color;
+
+  .min_title_section h2 {
+    color: #000;
+  }
+
+  .serv_item {
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    img {
+      width: 80px;
+      margin-bottom: 25px;
+      transition: 0.3s;
+    }
+
+    h3 {
+      font-size: 25px;
+    }
+  }
+
+  .serv_item:hover img {
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
+
+  .model_min_color {
+    background: $min-color;
+    display: inline-block;
+    margin: auto;
+    font-size: 19px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: #000;
+    transition: 0.3s;
+  }
+}
+
+// ----price-------
+
+.price {
+  .price_item:hover {
+    box-shadow: 0 0 10px 5px $min-color;
+    transition: 0.3s;
+  }
+
+  .price_item {
+    text-align: center;
+    padding: 50px 10px 25px 10px;
+    border: 2px solid $min-color;
+    background: #fff;
+    transition: 0.3s;
+    margin-bottom: 25px;
+
+    .price_head {
+      h4 {
+        font-size: 20px;
+      }
+
+      h1 {
+        color: $min-color;
+        font-size: 50px;
+
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+
+    button.btn {
+      font-size: 19px;
+      font-weight: 400;
+      padding: 10px 20px;
+      border-radius: 100px;
+      background: $min-color;
+      color: #000;
+      margin-top: 25px;
+      transition: 0.3s;
+    }
+
+    button.btn:hover {
+      color: $min-color;
+      background: #000;
+      transition: 0.3s;
+    }
+
+    .price_body {
+      margin-top: 50px;
+    }
+  }
+}
+
+// .........puplication.....
+.puplication {
+  background: $min-color;
+  padding-bottom: 50px;
+
+  .min_title_section h2 {
+    color: #000;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    color: black;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .flip-card-back {
+    background-color: #000;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .flip_cart_button {
+    font-size: 19px;
+    font-weight: 400;
+    padding: 10px 25px;
+    border-radius: 100px;
+    background: #000;
+    color: $min-color;
+    transition: 0.3s;
+    margin: 10px auto;
+    margin-right: -5px;
+  }
+}
+
+// -------------conact_us------------
+.contact_us {
+  .stay_in_tuch {
+    h4 {
+      color: $min-color;
+    }
+
+    p {
+      color: #000;
+      margin-bottom: 30px;
+    }
+
+    .sochial {
+      i {
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        border-radius: 50%;
+        margin: 0 5px;
+
+        &:hover {
+          transition: 1s;
+          transform: rotate(360deg);
+        }
+      }
+
+      .fa-facebook {
+        background: #3b5998;
+      }
+
+      .fa-whatsapp {
+        background: #00ab6b;
+      }
+    }
+  }
+
+  .conatactus_form {
+    .form-control {
+      border-radius: 10px;
+      padding: 0 20px;
+      height: 50px;
+      border: none;
+      background: #f3f3f3;
+    }
+
+    textarea {
+      height: 100px !important;
+      padding: 0 20px !important;
+    }
+
+    button {
+      font-size: 19px;
+      font-weight: 400;
+      padding: 10px 20px;
+      border-radius: 100px;
+      background: #fcca03;
+      color: #000;
+      margin-top: 25px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+  }
+}
+
+// ----footer----
+footer {
+  border-top: 2px solid $min-color;
+  padding-top: 15px;
+  margin-top: 50px;
+
+
+  .logo {
+    margin-top: 50px;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .quiq_links {
+    ul {
+      padding-left: 20px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: $min-color;
+    }
+  }
+
+  .copy {
+    height: 50px;
+    color: #fff;
+    background: $min-color;
+    margin-top: 25px;
+    line-height: 50px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
