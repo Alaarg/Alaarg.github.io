@@ -8,6 +8,12 @@
     background: #fcca03;
     line-height: 30px;
   }
+  .price .title_des {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify !important;
+  }
   section {
     margin: 15px 0px;
     padding: 10px;
@@ -69,7 +75,6 @@
   }
   .about_us .about_us_text {
     text-align: center;
-    height: 250px;
     padding: 0%;
   }
   .min_title_section {
@@ -88,11 +93,20 @@
   footer .quiq_links ul li {
     list-style: none;
   }
+  .sochial {
+    margin-bottom: 15px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   header.active .small_screen_nav_button {
     color: #000;
+  }
+  .price .title_des {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify !important;
   }
   header {
     height: 50px;
