@@ -5,7 +5,7 @@ a:hover {
 }
 
 body {
-  height: 2000px;
+  padding-top: 90px;
 }
 
 .gotop {
@@ -95,7 +95,7 @@ header nav ul li a::before {
 
 header nav ul li a.active::before {
   content: "";
-  top: 15px;
+  top: 10px;
   left: 0;
   height: 2px;
   width: 100%;
@@ -205,7 +205,7 @@ header.active nav ul li a:hover {
 }
 
 .serv .serv_item h3 {
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .serv .serv_item:hover img {
@@ -235,14 +235,22 @@ header.active nav ul li a:hover {
   transition: 0.3s;
 }
 
+.price .title_des {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
 .price .price_item {
   text-align: center;
-  padding: 50px 10px 25px 10px;
+  padding: 50px 40px 25px 40px;
   border: 2px solid #fcca03;
   background: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
+  min-height: 500px;
+  position: relative;
 }
 
 .price .price_item .price_head h4 {
@@ -261,13 +269,17 @@ header.active nav ul li a:hover {
 .price .price_item button.btn {
   font-size: 19px;
   font-weight: 400;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 100px;
   background: #fcca03;
   color: #000;
   margin-top: 25px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -80px;
 }
 
 .price .price_item button.btn:hover {
@@ -447,5 +459,13 @@ footer .copy {
 
 footer .copy p {
   margin: 0;
+}
+
+.color_black {
+  color: #000 !important;
+}
+
+.opload_body .input-group-prepend {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

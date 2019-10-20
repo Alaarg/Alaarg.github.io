@@ -7,9 +7,13 @@ a:hover {
   color: #000;
 }
 
+
+
 body {
-  height: 2000px;
+  padding-top: 90px ;
 }
+
+
 
 .gotop {
   position: fixed;
@@ -89,7 +93,7 @@ header {
 
       a.active::before {
         content: "";
-        top: 15px;
+        top: 10px;
         left: 0;
         height: 2px;
         width: 100%;
@@ -197,7 +201,7 @@ header.active {
     }
 
     h3 {
-      font-size: 25px;
+      font-size: 23px;
     }
   }
 
@@ -227,13 +231,21 @@ header.active {
     transition: 0.3s;
   }
 
+  .title_des{
+    color:#000;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
   .price_item {
     text-align: center;
-    padding: 50px 10px 25px 10px;
+    padding: 50px 40px 25px 40px;
     border: 2px solid $min-color;
     background: #fff;
     transition: 0.3s;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+    min-height: 500px;
+  position: relative;
+
 
     .price_head {
       h4 {
@@ -253,12 +265,17 @@ header.active {
     button.btn {
       font-size: 19px;
       font-weight: 400;
-      padding: 10px 20px;
+      padding: 10px 30px;
       border-radius: 100px;
-      background: $min-color;
+      background: #fcca03;
       color: #000;
       margin-top: 25px;
+      -webkit-transition: 0.3s;
       transition: 0.3s;
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      margin-left: -80px;
     }
 
     button.btn:hover {
@@ -441,5 +458,17 @@ footer {
     p {
       margin: 0;
     }
+  }
+}
+
+.color_black{
+  color: #000 !important;
+}
+// --------------------upload form -----------
+
+.opload_body {
+
+  .input-group-prepend {
+    cursor: pointer;
   }
 }

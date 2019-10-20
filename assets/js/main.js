@@ -1,11 +1,11 @@
 $(function () {
     // header active 
     $(window).scroll(function () {
-        if ($(this).scrollTop() >= 100) {
-            $('header').addClass('active');
-        } else {
-            $('header').removeClass('active');
-        }
+        // if ($(this).scrollTop() >= 100) {
+        //     $('header').addClass('active');
+        // } else {
+        //     $('header').removeClass('active');
+        // }
 
         //show go to top button on sctoll
         if($(window).scrollTop() >= 400){
