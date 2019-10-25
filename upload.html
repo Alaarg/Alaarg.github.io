@@ -18,11 +18,11 @@
 
 </head>
 
-<body style="padding-top:90px">
+<body style="padding-top:100px">
     <div class="gotop active">
         <i class="fas fa-chevron-up"></i>
     </div>
-    <header>
+    <header class="active">
         <div class="top_logo">
             <img src="assets/images/logo.png" alt="Blac&yellow">
         </div>
@@ -34,61 +34,91 @@
                 <li class="d-lg-none nav_li_close ">
                     <div class="fas fa-times"></div>
                 </li>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="./index.html#home" class="active">Home</a></li>
+                <li><a href="./index.html#about_us">About us</a></li>
+                <li><a href="./index.html#serv">Services</a></li>
+                <li><a href="./index.html#price">Pricing</a></li>
+                <li><a href="./index.html#puplication">publications</a></li>
+                <li><a href="./index.html#">Translation sampels </a></li>
+                <li><a href="./index.html#contact_us">Contact us</a></li>
             </ul>
         </nav>
 
-        <a href="" class="button_link">
+        <a href="upload.html" class="button_link" target="_blank">
             <div class="big_button">
                 <i class="fas fa-edit"></i> Order Translition
             </div>
         </a>
     </header>
 
+
     <div class="container opload_body">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form>
+                <form action="" method="">
                     <div class="form-group">
-                        <label for="exampleInputName">Email address</label>
-                        <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name">
+                        <label for="exampleFormControlSelect1">Chose Your Plan</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Standard</option>
+                            <option>Premium</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName"> Your Name</label>
+                        <input type="text" name="name" class="form-control" id="exampleInputName"
+                            placeholder="Enter Your Name">
 
                     </div>
+                    <label> upload yor file</label>
 
-                    <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
-    
+                    <div class="custom-file mb-3">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                        <input type="file" class="custom-file-input" id="customFile" name="file">
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputPhone">Phone Number</label>
+                                <input type="text" class="form-control" id="exampleInputPhone"
+                                    placeholder="Enter phone number">
+
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                                <label for="exampleInputPhone">Email address</label>
-                                <input type="text" class="form-control" id="exampleInputPhone" placeholder="Enter phone number">
-        
-                            </div>
+                        <div class="col-md-6">
                             <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Chose Prices Plan</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                      <option>STANDARD</option>
-                                      <option>Premium</option>
-                                     
-                                    </select>
-                                  </div>
+                                <label for="exampleInputEmail">Email address</label>
+                                <input type="text" class="form-control" id="exampleInputEmail"
+                                    placeholder="Enter phone number">
 
-                                  <div class="form-check">
-                                     
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                        <label class="form-check-label" for="exampleRadios1">
-                                          Default radio
-                                        </label>
-                                      </div>
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                        <label class="form-check-label" for="exampleRadios2">
-                                          Second default radio
-                                        </label>
-                                      </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>How To Contact With You</p>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Phone Claa</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">By Email</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio3">Both</label>
+                    </div>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-primary w-100">Send</button>
                 </form>
             </div>
 
@@ -110,49 +140,49 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="logo">
                         <img src="assets/images/logo.png" alt="">
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas facilis incidunt</p>
+
 
                 </div>
-                <div class="col-md-4">
-                    <div class="quiq_links">
+                <!-- <div class="col-md-4">
+                        <div class="quiq_links">
+    
+                            <h2>services</h2>
+                            <ul>
+                                <li><a href="">link</a></li>
+    
+                                <li><a href="">link</a></li>
+    
+                                <li><a href="">link</a></li>
+    
+                                <li><a href="">link</a></li>
+    
+                                <li><a href="">link</a></li>
+    
+                                <li><a href="">link</a></li>
+    
+                                <li><a href="">link</a></li>
+    
+                            </ul>
+                        </div>
+    
+                    </div> -->
 
-                        <h2>services</h2>
-                        <ul>
-                            <li><a href="">link</a></li>
-
-                            <li><a href="">link</a></li>
-
-                            <li><a href="">link</a></li>
-
-                            <li><a href="">link</a></li>
-
-                            <li><a href="">link</a></li>
-
-                            <li><a href="">link</a></li>
-
-                            <li><a href="">link</a></li>
-
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="quiq_links">
 
                         <h2>Quick Links</h2>
                         <ul>
-                            <li><a href="#home" class="active">Home</a></li>
-                            <li><a href="#about_us">About us</a></li>
-                            <li><a href="#serv">Services</a></li>
-                            <li><a href="#price">Pricing</a></li>
-                            <li><a href="#puplication">Puplication</a></li>
-                            <li><a href="#"> Translation sampels</a></li>
-                            <li><a href="#contact_us">Contact us</a></li>
+                            <li><a href="./index.html#home" class="active">Home</a></li>
+                            <li><a href="./index.html#about_us">About us</a></li>
+                            <li><a href="./index.html#serv">Services</a></li>
+                            <li><a href="./index.html#price">Pricing</a></li>
+                            <li><a href="./index.html#puplication">Puplication</a></li>
+                            <li><a href="./index.html#"> Translation sampels</a></li>
+                            <li><a href="./index.html#contact_us">Contact us</a></li>
 
                         </ul>
                     </div>
@@ -164,7 +194,8 @@
             </div>
         </div>
         <div class="copy">
-            <p class="text-center"><a href="">Alaarg</a> © 2018. All rights reserved.</p>
+            <p class="text-center"><a href="https://alaarg.com" target="_blank"> Developed by Alaarg</a> © 2018. All
+                rights reserved.</p>
         </div>
     </footer>
 
