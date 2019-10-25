@@ -1,11 +1,11 @@
 <?php
 
 // configure
-$from = 'Demo contact form <demo@domain.com>';
-$sendTo = 'Demo contact form <demo@domain.com>';
+$from = 'Black and yello';
+$sendTo = 'ahmadalaarg123@gmail.com';
 $subject = 'New message from contact form';
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
-$okMessage = 'Thank you, we will get back to you soon';
+$fields = array('name' => 'Name', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
+$okMessage = 'Thank you, we will get back to you soon ';
 $errorMessage = 'Looks like an error. Please try again later';
 
 // let's do the sending

@@ -120,7 +120,7 @@
             <div class="row">
                 <!-- serv item -->
                 <div class="col-md-3">
-                    <div class="serv_item" data-toggle="modal" data-target="#">
+                    <div class="serv_item" data-toggle="modal" data-target="#exampleModalCenter1">
                         <!-- exampleModalCenter1 -->
                         <img src="assets/images/serv1.png" alt="">
                         <h3>Reports <br /> (Business & Legal)
@@ -133,15 +133,34 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalCenterTitle">1 Technical Translation</h5>
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Reports (Business & Legal)
+                                    </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a temporibus
-                                        ullam, totam corporis recusandae natus quidem, animi nulla nostrum ducimus!
-                                        Deleniti natus sed omnis id doloribus dolores temporibus delectus.</p>
+                                    <h2>
+                                        <strong>
+
+                                            The Content We Translate:
+                                        </strong>
+                                    </h2>
+                                    <u class="list-unstyled">
+                                        <li>
+                                            <h4>
+
+                                                Financial Repots
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <h4>
+
+                                                Insurance Policies.
+                                            </h4>
+                                        </li>
+                                    </u>
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button " class="btn model_min_color"
@@ -155,7 +174,7 @@
 
                 <!-- serv item -->
                 <div class="col-md-3">
-                    <div class="serv_item" data-toggle="modal" data-target="#">
+                    <div class="serv_item" data-toggle="modal" data-target="#exampleModalCenter2">
                         <!-- exampleModalCenter2 -->
                         <img src="assets/images/serv2.png" alt="">
                         <h3>Books</h3>
@@ -167,15 +186,36 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalCenterTitle2">2Technical Translation</h5>
+                                    <h5 class="modal-title" id="exampleModalCenterTitle2">Book</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a temporibus
-                                        ullam, totam corporis recusandae natus quidem, animi nulla nostrum ducimus!
-                                        Deleniti natus sed omnis id doloribus dolores temporibus delectus.</p>
+                                    <h2>Types of Books We Translate:
+                                    </h2>
+                                    <ul>
+                                        <li>
+                                            <h5>Academic books;</h5>
+                                        </li>
+                                        <li>
+                                            <h5>Literature & Poetry;</h5>
+                                        </li>
+                                        <li>
+                                            <h5>Medical Books;</h5>
+                                        </li>
+                                        <li>
+                                            <h5>Islamic Books;</h5>
+                                        </li>
+                                        <li>
+                                            <h5>Children’s Books.</h5>
+                                        </li>
+
+
+
+
+
+                                    </ul>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button " class="btn model_min_color"
@@ -294,7 +334,7 @@
                     We offer two types of translation rates:
 
                 </h4>
-                <div class="row mt-3 mb-3" >
+                <div class="row mt-3 mb-3">
                     <div class="col-md-6 text-right" style="font-size:18px">Per word translation rates </div>
                     <div class="col-md-6 text-left" style="font-size:18px">Per hour translation rates.</div>
                 </div>
@@ -334,9 +374,9 @@
                             <p>Accredited </p>
                         </div> -->
                         <p class="mt-3"> <strong>Non-technical content</strong>
-                            </p>
+                        </p>
                         <div class="price_body">
-                            
+
                             <p class="price_des">Professional translation services prices <br /> start from as little as
                                 0.10 per word. (USD)</p>
                         </div>
@@ -383,7 +423,7 @@
                         <p class="text-center mt-3"> <strong>Technical Translation</strong>
                         </p>
                         <div class="price_body">
-                            
+
                             <p class="price_des" style="text-align: justify">
                                 A technical translation is a specialized translation involving the translation of
                                 documents produced by technical writers, or texts that relate to technological subject
@@ -513,17 +553,20 @@
                 </div>
                 <div class="col-md-8">
                     <div class="conatactus_form">
-                        <form  method="post" action="assets/php/contact.php ">
+                        <form method="post" action="assets/php/contact.php" role="form">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter Your Name">
+                                <input type="text" name="name" class="form-control" placeholder="Enter Your Name"
+                                    required="required">
                             </div>
 
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Enter Your Email">
+                                <input type="email" name="email" class="form-control" placeholder="Enter Your Email"
+                                    required="required">
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Enter Your Text"></textarea>
+                                <textarea class="form-control" name="message" placeholder="Enter Your Text"
+                                    required="required"></textarea>
                             </div>
                             <!-- 
                             <div class="form-group form-check">
