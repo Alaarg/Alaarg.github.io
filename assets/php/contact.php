@@ -2,7 +2,7 @@
 
 // configure
 $from = 'From <www.blacknyellows.com>';
-$sendTo = 'ahmadalaarg123@gmail.com,adwan.moath1@gmail.com';
+$sendTo = 'info@blacknyellows.com';
 $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
 $errorMessage = 'Looks like an error. Please try again later';

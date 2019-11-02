@@ -14,7 +14,7 @@ $target_file = $target_dir . $file_name;
 // Check if file already exists
 
 // Check file size
-if ($_FILES["file"]["size"] > 1000000) {
+if ($_FILES["file"]["size"] > 5000000) {
 
      echo '<script>alert("Sorry, your file is too large.");</script>' ;
      echo '<script>location.href ="http://blacknyellows.com/";</script>' ;
@@ -33,7 +33,7 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
        
        // configure
 $from = 'From <www.blacknyellows.com>';
-$sendTo = 'ahmadalaarg123@gmail.com,adwan.moath1@gmail.com';
+$sendTo = 'info@blacknyellows.com';
 $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'email' => 'Email', 'plan' => 'Plan', 'contact_method' => 'Contact Method', 'phone' => 'Phone', 'file_url' => 'Attachment'); // array variable name => Text to appear in email
 $okMessage = 'Thank you, we will get back to you soon ';
@@ -42,7 +42,7 @@ $errorMessage = 'Looks like an error. Please try again later';
 // let's do the sending
 
     $emailText = "You have new message from order transaction form\n=============================\n";
-$_POST['file_url'] = "https://topworldrich.com/ahmad/assets/uploads/".$file_name;
+$_POST['file_url'] = "http://blacknyellows.com/assets/uploads/".$file_name;
     foreach ($_POST as $key => $value) {
 
         if (isset($fields[$key])) {
