@@ -14,7 +14,7 @@ $target_file = $target_dir . $file_name;
 // Check if file already exists
 
 // Check file size
-if ($_FILES["file"]["size"] > 5000000) {
+if ($_FILES["file"]["size"] > 25000000) {
 
      echo '<script>alert("Sorry, your file is too large.");</script>' ;
      echo '<script>location.href ="http://blacknyellows.com/";</script>' ;
