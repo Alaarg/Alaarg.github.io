@@ -1,19 +1,19 @@
 $simplebg: #fff;
 $min-color: #fcca03;
 
+.min_color{
+  color: $min-color;
+}
 a,
 a:hover {
   text-decoration: none;
   color: #000;
 }
 
-
-
 body {
-  padding-top: 90px ;
+  padding-top: 90px;
+  text-transform: capitalize;
 }
-
-
 
 .gotop {
   position: fixed;
@@ -25,16 +25,13 @@ body {
   line-height: 50px;
   text-align: center;
   cursor: pointer;
-  transition: .3s;
-  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.20);
+  transition: 0.3s;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
   z-index: 999999999;
-
-
 }
 
 .gotop.active {
   display: none;
-
 }
 
 section {
@@ -70,7 +67,9 @@ header {
       width: 130px;
     }
   }
-
+  li.d-lg-none.nav_li_close{
+    color: $min-color;
+  }
   nav {
     display: inline-block;
     transition: 0.3s;
@@ -231,8 +230,8 @@ header.active {
     transition: 0.3s;
   }
 
-  .title_des{
-    color:#000;
+  .title_des {
+    color: #000;
     font-size: 18px;
     margin-bottom: 15px;
   }
@@ -244,8 +243,7 @@ header.active {
     transition: 0.3s;
     margin-bottom: 35px;
     min-height: 500px;
-  position: relative;
-
+    position: relative;
 
     .price_head {
       h4 {
@@ -267,7 +265,7 @@ header.active {
       font-weight: 400;
       padding: 10px 30px;
       border-radius: 100px;
-      background: #fcca03;
+      background: $min-color;
       color: #000;
       margin-top: 25px;
       -webkit-transition: 0.3s;
@@ -289,7 +287,8 @@ header.active {
       display: flex;
       align-items: center;
       flex-direction: column;
-      justify-content: center;    }
+      justify-content: center;
+    }
   }
 }
 
@@ -338,6 +337,14 @@ header.active {
       height: 100%;
     }
   }
+  .flip-card-back {
+    color: black;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   .flip-card-back {
     background-color: #000;
@@ -355,6 +362,14 @@ header.active {
     transition: 0.3s;
     margin: 10px auto;
     margin-right: -5px;
+    transition: 0.3s;
+
+    &:hover {
+      background: transparent;
+      border: 1px solid #000;
+      color: #000;
+      transition: 0.3s;
+    }
   }
 }
 
@@ -416,7 +431,7 @@ header.active {
       font-weight: 400;
       padding: 10px 20px;
       border-radius: 100px;
-      background: #fcca03;
+      background: $min-color;
       color: #000;
       margin-top: 25px;
       -webkit-transition: 0.3s;
@@ -430,7 +445,6 @@ footer {
   border-top: 2px solid $min-color;
   padding-top: 15px;
   margin-top: 50px;
-
 
   .logo {
     margin-top: 50px;
@@ -464,14 +478,26 @@ footer {
   }
 }
 
-.color_black{
+.color_black {
   color: #000 !important;
 }
 // --------------------upload form -----------
 
 .opload_body {
-
   .input-group-prepend {
     cursor: pointer;
   }
+}
+.order_translation_btn {
+  background: $min-color;
+  font-size: 20px;
+}
+
+
+label.custom-file-label.me::after {
+  content: 'Browse';
+  background: $min-color;
+  border: 0;
+  height: 101%;
+
 }

@@ -1,12 +1,12 @@
 <?php
 
 // configure
-$from = 'website_name <www.topworldrich.com>';
+$from = 'From <www.blacknyellows.com>';
 $sendTo = 'ahmadalaarg123@gmail.com,adwan.moath1@gmail.com';
 $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
-$okMessage = 'Thank you, we will get back to you soon ';
 $errorMessage = 'Looks like an error. Please try again later';
+$okMessage = 'Thank you, we will get back to you soon ';
 
 // let's do the sending
 
@@ -31,4 +31,4 @@ catch (\Exception $e)
 }
 
  echo '<script>alert("'.$responseArray['message'].'");</script>' ;
-     echo '<script>location.href ="https://topworldrich.com/ahmad/index.html#contact_us";</script>' ;
+     echo '<script>location.href ="http://blacknyellows.com/";</script>' ;

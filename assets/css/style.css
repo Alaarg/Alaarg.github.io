@@ -1,3 +1,7 @@
+.min_color {
+  color: #fcca03;
+}
+
 a,
 a:hover {
   text-decoration: none;
@@ -6,6 +10,7 @@ a:hover {
 
 body {
   padding-top: 90px;
+  text-transform: capitalize;
 }
 
 .gotop {
@@ -18,8 +23,8 @@ body {
   line-height: 50px;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   -webkit-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
   z-index: 999999999;
@@ -67,6 +72,10 @@ header .top_logo {
 
 header .top_logo img {
   width: 130px;
+}
+
+header li.d-lg-none.nav_li_close {
+  color: #fcca03;
 }
 
 header nav {
@@ -360,6 +369,15 @@ header.active nav ul li a:hover {
 }
 
 .puplication .flip-card-back {
+  color: black;
+}
+
+.puplication .flip-card-back img {
+  width: 100%;
+  height: 100%;
+}
+
+.puplication .flip-card-back {
   background-color: #000;
   color: white;
   -webkit-transform: rotateY(180deg);
@@ -377,6 +395,15 @@ header.active nav ul li a:hover {
   transition: 0.3s;
   margin: 10px auto;
   margin-right: -5px;
+  transition: 0.3s;
+}
+
+.puplication .flip_cart_button:hover {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .contact_us .stay_in_tuch h4 {
@@ -480,5 +507,17 @@ footer .copy p {
 
 .opload_body .input-group-prepend {
   cursor: pointer;
+}
+
+.order_translation_btn {
+  background: #fcca03;
+  font-size: 20px;
+}
+
+label.custom-file-label.me::after {
+  content: 'Browse';
+  background: #fcca03;
+  border: 0;
+  height: 101%;
 }
 /*# sourceMappingURL=style.css.map */

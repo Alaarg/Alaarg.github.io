@@ -17,14 +17,14 @@ $target_file = $target_dir . $file_name;
 if ($_FILES["file"]["size"] > 1000000) {
 
      echo '<script>alert("Sorry, your file is too large.");</script>' ;
-     echo '<script>location.href ="https://topworldrich.com/ahmad/upload.html";</script>' ;
+     echo '<script>location.href ="http://blacknyellows.com/";</script>' ;
      die();
    
 }
 // Allow certain file formats
 if($fileType != "docx" && $fileType != "doc" && $fileType != "pdf" ) {
      echo '<script>alert("Sorry, only docx, doc, & pdf files are allowed. you have entered "'. $fileType.');</script>' ;
-     echo '<script>location.href ="https://topworldrich.com/ahmad/upload.html";</script>' ;
+     echo '<script>location.href ="http://blacknyellows.com/";</script>' ;
    
      die();
 }
@@ -32,7 +32,7 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
        
        
        // configure
-$from = 'website_name <www.topworldrich.com>';
+$from = 'From <www.blacknyellows.com>';
 $sendTo = 'ahmadalaarg123@gmail.com,adwan.moath1@gmail.com';
 $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'email' => 'Email', 'plan' => 'Plan', 'contact_method' => 'Contact Method', 'phone' => 'Phone', 'file_url' => 'Attachment'); // array variable name => Text to appear in email
@@ -59,20 +59,20 @@ $_POST['file_url'] = "https://topworldrich.com/ahmad/assets/uploads/".$file_name
 
 
  echo '<script>alert("'.$responseArray['message'].'");</script>' ;
-     echo '<script>location.href ="https://topworldrich.com/ahmad/upload.html";</script>' ;
+     echo '<script>location.href ="http://blacknyellows.com/";</script>' ;
    die();
        
        
     } else {
          echo '<script>alert("Sorry, there was an error uploading your file.."'.$target_file.');</script>' ;
-     echo '<script>location.href ="https://topworldrich.com/ahmad/upload.html";</script>' ;
+     echo '<script>location.href ="http://blacknyellows.com/";</script>' ;
        die();
     }
 
     
 }else {
        echo '<script>alert("Sorry, there was an error uploading your file.");</script>' ;
-     echo '<script>location.href ="https://topworldrich.com/ahmad/upload.html";</script>' ;
+     echo '<script>location.href ="http://blacknyellows.com/";</script>' ;
        die(); 
 }
 
