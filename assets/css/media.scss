@@ -1,287 +1,577 @@
+$text_color: #213242;
+$min_Shadow_color: rgba(227, 169, 43, 0.55);
+$min_color: #e3a92b;
+$min_tow: #517490;
+$a: #3c5a72;
+$a: #cd9a03;
+$a: #e1c888;
+
 @media (max-width: 575.98px) {
-    .gotop {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        height: 30px;
-        width: 30px;
-        background: #fcca03;
-        line-height: 30px;
-    }    
-    .price .title_des {
-        color: #000;
-        font-size: 14px;
-        margin-bottom: 15px;
-        text-align: justify !important;
-    }
-  
-    section {
-        margin: 15px 0px;
-        padding: 10px;
-    }
-    
-    header.active {
-        .small_screen_nav_button {
-            color: #000
+  header {
+    .top_header {
+      padding: 5px 15px;
+      .logo {
+        width: 60px;
+        a {
+          height: 50px;
         }
-    }
-
-    .min_title_section h2{
-        font-size: 25px;
-
-    }
-    header {
-        height: 50px;
-
-        .top_logo img {
-            width: 75px
+      }
+      .search_form {
+        button.btn.search_btn {
+          margin-left: -50px;
         }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 0;
-            right: 0;
-            overflow: hidden;
-
-            ul {
-                padding: 0;
-                text-align: center;
-                padding: 10px;
-                position: relative;
-            }
-
-            ul li {
-                display: block;
-                margin-bottom: 5px
-            }
-
-        }
-
-        nav.active {
-            height: 100%;
-            background: #fff;
-            transition: .3s;
-
-            ul li a {
-                color: #000;
-                position: relative;
-            }
-
-        }
-
-        .big_button {
-            display: none
-        }
-
-        .small_screen_nav_button {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: 10px;
-            top: 10px;
-            font-size: 20px;
-            color: #fff
-        }
-
-        .serv .serv_item h3 {
-            font-size: 20px;
-        }
+      }
     }
-
-    .about_us .about_us_text {
-        text-align: center;
-        
-    padding: 0%;
-    }
-
-    .min_title_section {
-        margin-bottom: 10px;
-        margin-top: 0
-    }
-
-    .about_us .about_us_text h1 {
-        font-size: 30px
-    }
-
-    .about_us .about_us_text p {
-        font-size: 15px;
-    }
-    footer{
-        .quiq_links{
+    .nav {
+      position: absolute;
+      top: 65px;
+      .min_menu {
+        height: 60px;
+        display: block;
+        position: relative;
+        .login_btns_mobile {
+          display: block;
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          a.log_mobile {
+            color: #fff;
+            font-size: 16px;
+            background-color: $min_color;
+            padding: 5px 15px;
+            line-height: 30px;
             text-align: center;
-      
-            ul li{
-            list-style: none;
+            border-radius: 3px;
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.26);
+              color: #fff;
+              border: $min_color;
+            }
+          }
         }
+        .toggle_bar {
+          display: block;
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          background-color: $min_color;
+          z-index: 99;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          border-radius: 3px;
+          color: #fff;
         }
-    }
-    .sochial{
-        margin-bottom: 15px;
-    }
-
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    header.active {
-        .small_screen_nav_button {
-            color: #000
-        }
-    }
-    .price .title_des {
-        color: #000;
-        font-size: 14px;
-        margin-bottom: 15px;
-        text-align: justify !important;
-    }
-    header {
-        height: 50px;
-
-        .top_logo img {
-            width: 75px
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 0;
-            right: 0;
+        .the_navbar {
+          width: 100%;
+          transform: translate(0%, -120%);
+          display: block;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          z-index: 9999999;
+          ul {
+            display: block;
+            align-items: center;
+            text-align: center;
             overflow: hidden;
+            background-color: #fff;
 
             ul {
-                padding: 0;
-                text-align: center;
-                padding: 10px;
-                position: relative;
+              display: none;
             }
-
-            ul li {
-                display: block;
-                margin-bottom: 5px
+            li {
+              padding: 15px 5px;
+              margin: 5px;
+              a {
+                font-size: 20px;
+                color: $min_color;
+              }
+              &::after {
+                display: none;
+              }
             }
-
+          }
+          &.active {
+            transform: translate(0%);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            z-index: 99;
+          }
         }
+      }
+    }
+    .header_slider {
+      .indecators_style {
+        z-index: 1;
 
-        nav.active {
-            height: 100%;
-            background: #fff;
-            transition: .3s;
-
-            ul li a {
-                color: #000;
-                position: relative;
-            }
-
+        li {
+          background-color: $min_color;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
         }
-
-        .big_button {
-            display: none
+      }
+      .slider_img_bg {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .over_ly {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.26);
+      }
+      .header_slider_contain {
+        position: relative;
+        z-index: 5;
+        color: #fff;
+        h1 {
+          font-size: 25px;
         }
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+  //  ========================================= start Home section ==========================================
 
-        .small_screen_nav_button {
+  .pagge_wraper {
+    .min_sec {
+      padding-top: 15px;
+      padding-bottom: 25px;
+    }
+    .corses_sec {
+      .home_intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0;
+        h1 {
+          color: $min_color;
+          font-size: 30px;
+          text-align: center;
+        }
+        p {
+          padding-top: 10px;
+          color: $text_color;
+          text-align: center;
+        }
+      }
+    }
+    .cors_item {
+      display: block;
+      box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.18823529411764706);
+      border-radius: 5px;
+      margin: 12px 0;
+      overflow: hidden;
+      .cors_body {
+        .cors_img {
+          height: 200px;
+          position: relative;
+          &::before {
+            content: "";
+            left: -50px;
+            right: 0;
+            bottom: -2px;
+            height: 45px;
             position: absolute;
-            width: 20px;
-            height: 20px;
-            right: 10px;
-            top: 10px;
+            border-style: solid;
+            border-color: transparent #fff transparent transparent;
+            border-width: 85px 474px 0px 0px;
+          }
+          .cors_price {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: $min_color;
+            color: $text_color;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            right: 0;
+            bottom: 35px;
+            font-weight: bold;
+            overflow: hidden;
+          }
+        }
+        .cors_info {
+          padding: 0 10px;
+          text-align: center;
+          .cors_name {
             font-size: 20px;
-            color: #fff
+            font-weight: 500;
+          }
+          .cors_desc {
+            color: $min_color;
+            font-weight: 500;
+            margin: 10px 0;
+          }
         }
-    }
-}
-
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    header.active {
-        .small_screen_nav_button {
-            color: #000
-        }
-    }
-
-    header {
-        height: 50px;
-
-        .top_logo img {
-            width: 75px
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 0;
-            right: 0;
-            overflow: hidden;
-
-            ul {
-                padding: 0;
-                text-align: center;
-                padding: 10px;
-                position: relative;
+        .cors_footer {
+          padding: 0 15px;
+          margin: 30px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .cors_rating {
+            .fa {
+              color: gold;
             }
+          }
+        }
+        .reacher_info {
+          padding: 5px 15px;
+          margin: 30px 0 5px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
-            ul li {
-                display: block;
-                margin-bottom: 5px
-            }
+          border-top: 1px solid $text_color;
+        }
+      }
+    }
 
+    .event_sec {
+      .events_title {
+        h1 {
+          color: $min_color;
+          font-size: 30px;
+        }
+        p {
+          color: $text_color;
+        }
+      }
+      .event_item {
+        margin: 15px 0;
+      }
+    }
+    footer {
+      background-color: $text_color;
+      color: #fff;
+      padding: 25px 0;
+      display: flex;
+      align-items: center;
+      .footer_about {
+        text-align: center;
+      }
+      .footer_links {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+          display: inline-block;
+          margin: 0 5px;
+          a {
+            color: $min_color;
+          }
+        }
+      }
+      .chat_services {
+        text-align: center;
+        .btn {
+          margin-top: 10px;
+          color: $min_color;
+        }
+      }
+    }
+  }
+
+  .courses_filter {
+    margin: 5px 0;
+    .corses_btn {
+      margin: 5px;
+      color: #fff;
+      font-size: 12px;
+      padding: 5px 5px !important;
+    }
+  }
+
+  .about_us {
+    margin: 10px 0;
+    .about_tabs {
+      margin-bottom: 15px;
+      ul {
+        li {
+          text-align: center;
+          cursor: pointer;
+          border: 1px solid #ddd;
+          transition: 0.3s;
+          padding: 10px;
+          &.active {
+            background-color: $min_color;
+            border-color: $min_color;
+          }
+          &:hover {
+            background-color: $min_color;
+            border-color: $min_color;
+            transition: 0.3s;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .about_text {
+      .about_section_text {
+        display: none;
+        &.active {
+          display: block;
         }
 
-        nav.active {
-            height: 100%;
-            background: #fff;
-            transition: .3s;
+        .title {
+          font-size: 25px;
+          font-weight: bold;
+          color: $min_color;
+        }
+      }
+    }
+  }
+  .course_info {
+    margin: 50px 0;
 
-            ul li a {
+    .course_inforomation {
+      border: 3px solid $min_Shadow_color;
+      background-color: $text_color;
+      color: #fff;
+      .course_image {
+        height: 400px;
+      }
+      .course_info_body {
+        padding: 10px 25px;
+        .course_name {
+          margin: 25px 10px;
+        }
+        .course_teacher_section_rating {
+          margin-top: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 25px;
+          .teacher {
+            display: flex;
+            align-items: center;
+            .techer_img {
+              height: 90px;
+              width: 90px;
+              border-radius: 50%;
+            }
+            .teacher_info {
+              margin-left: 25px;
+              .thc_position {
+                font-size: 25px;
+                font-weight: bold;
+              }
+              .thc_name {
+                font-weight: 500;
+              }
+            }
+          }
+          .teacher_rating {
+            .rating_tch {
+              color: gold;
+            }
+          }
+        }
+      }
+
+      .course_desctiption_taps {
+        .nav {
+          justify-content: center;
+          li {
+            margin: 10px;
+            padding: 0;
+            a {
+              padding: 15px 25px;
+              &:hover {
+                background-color: #fff;
                 color: #000;
-                position: relative;
+              }
+              &.active {
+                background-color: #fff;
+              }
             }
-
+          }
         }
-
-        .big_button {
-            display: none
+        .taps_content {
+          padding: 15px 30px;
+          text-align: center;
         }
-
-        .small_screen_nav_button {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: 20px;
-            top: 10px;
-            font-size: 25px;
-            color: #fff
-        }
+      }
     }
-
-    .about_us .about_us_text {
-        text-align: left
+    .course_sidebar_info {
+      border: 2px solid $min_Shadow_color;
+      padding: 15px;
+      .the_title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .price {
+        text-align: center;
+        border-bottom: 1px solid $min_color;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        font-size: 20px;
+        padding: 5px;
+      }
+      .course_date_info {
+        li {
+          font-size: 19px;
+          display: flex;
+          align-items: center;
+          margin: 15px 0;
+          i {
+            font-size: 22px;
+            color: $min_color;
+          }
+          p {
+            margin: 0;
+            margin-left: 15px;
+          }
+        }
+      }
+      .btn_color {
+        color: #fff;
+        padding: 10px 25px;
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
     }
+  }
 
+  .course_info {
+    margin: 10px 0;
   
-
-    .about_us .about_us_text h1 {
-        font-size: 25px
-    }
-
-    .about_us .about_us_text p {
-        font-size: 15px;
-    }
-}
-
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    header {
-        nav ul li {
-            display: inline-block;
-            margin: 0 5px;
-            font-size: 18px;
-
+    .course_inforomation {
+      border: 3px solid $min_Shadow_color;
+      background-color: $text_color;
+      color: #fff;
+      .course_image {
+        height: 250px;
+      }
+      .course_info_body {
+        padding: 5px 10px;
+        .course_name {
+          margin:10px 5px;
         }
+        .course_teacher_section_rating {
+          margin-top: 15px;
+          display: block;
+          margin-bottom: 30px;
+          
+          .teacher {
+            display: flex;
+            align-items: center;
+            .techer_img {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+            }
+            .teacher_info {
+              margin-left: 19px;
+              .thc_position {
+                font-size: 19px;
+                font-weight: bold;
+              }
+              .thc_name {
+                font-weight: 500;
+              }
+            }
+          }
+          .teacher_rating {
+            margin: 15px 0;
+            text-align: center;
+            .rating_tch {
+              color: gold;
+            }
+          }
+        }
+      }
+  
+      .course_desctiption_taps {
+        .nav {
+          justify-content: center;
+          li {
+            margin: 5px;
+            padding: 0;
+            font-size: 15px;
+            a {
+              padding: 5px 10px;
+              &:hover {
+                background-color: #fff;
+                color: #000;
+              }
+              &.active {
+                background-color: #fff;
+              }
+            }
+          }
+        }
+        .taps_content {
+          padding: 15px 5px;
+          text-align: center;
+        }
+      }
     }
+    .course_sidebar_info {
+      border: 2px solid $min_Shadow_color;
+      padding: 15px;
+      margin-top: 15px;
+      .the_title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .price {
+        text-align: center;
+        border-bottom: 1px solid $min_color;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        font-size: 20px;
+        padding: 5px;
+      }
+      .course_date_info {
+        li {
+          font-size: 19px;
+          display: flex;
+          align-items: center;
+          margin: 15px 0;
+          i {
+            font-size: 22px;
+            color: $min_color;
+          }
+          p {
+            margin: 0;
+            margin-left: 15px;
+          }
+        }
+      }
+      .btn_color {
+        color: #fff;
+        padding: 10px 25px;
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
 }
 
+@media (max-width: 767.98px) {
+}
 
-@media (min-width: 1200px) {}
+@media (max-width: 991.98px) {
+  header .header_slider h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+}

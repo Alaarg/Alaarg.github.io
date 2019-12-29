@@ -1,79 +1,60 @@
-$(function () {
-    // header active 
-    $(window).scroll(function () {
-        // if ($(this).scrollTop() >= 100) {
-        //     $('header').addClass('active');
-        // } else {
-        //     $('header').removeClass('active');
-        // }
+$(window).ready(function() {
+  $(".toggle_bar").click(function() {
+    $(".the_navbar").toggleClass("active");
+    $(".toggle_bar > i").toggleClass(" fa-bars , fa-times");
+  });
 
-        //show go to top button on sctoll
-        if($(window).scrollTop() >= 400){
-            $('.gotop').removeClass('active');
-        }
-        else{
-            $('.gotop').addClass('active');
+  $(window).scroll(function() {
+    // console.log($(this).scrollTop());
+    if ($(window).scrollTop() >= 150) {
+      $(".nav").addClass("active");
+    } else {
+      $(".nav").removeClass("active");
+    }
+  });
 
+  $(".courses_filter > .corses_btn").on("click", function(e) {
+    e.preventDefault();
+    $(this)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
 
-        }
- 
-});
-         // ----scrool top  button
-         $(window).each(function () {
+    var filter = $(this).attr("data-filter");
 
-         $('.gotop').each(function() {
-            $(this).click(function () {
-                $('html,body').animate({
-                    scrollTop:0
-                },1000);
-            });
-        });
-    });
+    $(".education_courses")
+      .find($(`.course_item_grid`))
+      .hide();
+    $(".education_courses")
+      .find($(`.course_item_grid#${filter}`))
+      .show();
 
-// small nav menu button
-    $(window).ready(function () {
-        $('.small_screen_nav_button').click(function () {
-            $('nav').addClass('active');
-        });
-        $('.nav_li_close').click(function () {
-            $('nav').removeClass('active');
-        });
-    });
-  //nav item add class active
-    $("header nav ul li a").click(function (e) {
+    if (filter === "all") {
+      $(".education_courses")
+        .find($(`.course_item_grid`))
+        .show();
+    }
 
-        $(this).addClass('active');
-        $('nav ul li ').find('a').not(this).removeClass('active');
+  });
 
-    });
-    $("header nav ul li a").click(function () {
-        $('html, body').animate({
-            scrollTop: $(this).offset().top
-        });
-    });
-
-    //animate scroll
-
-    $(document).on('click', 'nav li a[href^="#"]', function (e) {
-
-        var target = $(this.getAttribute('href'));
-
-        if (target.length) {
-            e.preventDefault();
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top - 80
-            }, 1000);
-        }
-    });
-
-
+  $(".about_tabs  .list-group-item").on("click", function() {
+    var filter = $(this).attr("data-about");
+    // console.log($(this).attr("data-about"));
+    $(this)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+  
     
-});
-
-    $(document).ready(function(){
-        $('#customFile').change(function(e){
-            var fileName = e.target.files[0].name;
-            $('.custom-file-label').text( fileName );
-        });
+    $(".about_text ")
+    .find($(`.about_section_text`))
+    .removeClass('active');
+    
+    $(".about_text ")
+    .find($(`.about_section_text#${filter}`))
+    .addClass('active');
+  
+    
+  
     });
-
+});
