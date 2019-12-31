@@ -34,27 +34,87 @@ $(window).ready(function() {
         .find($(`.course_item_grid`))
         .show();
     }
-
   });
 
   $(".about_tabs  .list-group-item").on("click", function() {
     var filter = $(this).attr("data-about");
     // console.log($(this).attr("data-about"));
     $(this)
-    .addClass("active")
-    .siblings()
-    .removeClass("active");
-  
-    
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+
     $(".about_text ")
-    .find($(`.about_section_text`))
-    .removeClass('active');
-    
+      .find($(`.about_section_text`))
+      .removeClass("active");
+
     $(".about_text ")
-    .find($(`.about_section_text#${filter}`))
-    .addClass('active');
-  
-    
-  
-    });
+      .find($(`.about_section_text#${filter}`))
+      .addClass("active");
+  });
+
+  $(".cart_next").click(function() {
+    // let section = $(".section_cart").attr("data-cart");
+
+    $(".section_cart.active")
+      .next()
+      .addClass("active");
+    $(".section_cart.active")
+      .prev()
+      .removeClass("active");
+
+    // ......sde bat taps .....
+    $(".price_side_bar ul li.active")
+      .next()
+      .addClass("active");
+
+    $(".price_side_bar ul li.active")
+      .prev()
+      .removeClass("active");
+
+    if ($(".last_step").hasClass("active")) {
+      $(this).hide();
+      // console.log('has');
+    } 
+  });
+  $(".cart_prev").click(function() {
+    // let section = $(".section_cart").attr("data-cart");
+
+    $(".section_cart.active")
+      .prev()
+      .addClass("active");
+    $(".section_cart.active")
+      .next()
+      .removeClass("active");
+
+    $(".price_side_bar ul li.active")
+      .prev()
+      .addClass("active");
+
+    $(".price_side_bar ul li.active")
+      .next()
+      .removeClass("active");
+
+
+      if (!$(".last_step").hasClass("active")) {
+        $('.cart_next').show();
+        // console.log('has');
+      } 
+
+  });
+  $('.section_cart_1 input:radio[name="herthiscourse"]').change(function() {
+    if ($(this).is(":checked") || $(this).val() == "Yes") {
+      // append goes here
+      $(".cart_next").removeAttr("disabled");
+      // $(".cart_next").click(function() {
+      //     $(".cart_next").addClass("disabled");
+      // });
+    }
+  });
+
+  if ($(".last_step").hasClass("active")) {
+    alert("you in 3 li");
+  }
+
+  $(".datepicker").datepicker();
 });

@@ -405,6 +405,9 @@ header {
       .btn {
         margin-top: 10px;
         color: $min_color;
+        &:hover {
+          color: #fff;
+        }
       }
     }
   }
@@ -655,8 +658,170 @@ header {
       display: block;
       margin-top: 15px;
       margin-bottom: 10px;
-      &:hover{
+      &:hover {
         background-color: transparent;
+        color: $min_color;
+      }
+    }
+  }
+}
+
+.cart_page {
+  margin: 25px 0;
+  .cart_form {
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 3px solid $min_Shadow_color;
+    .section_cart {
+      display: none;
+      &.active {
+        display: block;
+        transition: 0.3s;
+      }
+      transition: 0.3s;
+    }
+  }
+  .section_cart_1 {
+    .cart_title {
+      margin: 5px 0px;
+      padding: 10px;
+      border-bottom: 1px solid;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .price {
+      display: flex;
+      flex-direction: column;
+      font-size: 22px;
+      margin: 10px;
+    }
+    .check_price {
+      font-size: 20px;
+      .form-check {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+      .form-check-label {
+        line-height: normal;
+        margin-top: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        visibility: hidden;
+        cursor: pointer;
+        position: relative;
+      }
+      input[type="radio"]:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 15px;
+        top: -2px;
+        left: 0px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: "";
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+      }
+
+      input[type="radio"]:checked:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 15px;
+        top: -2px;
+        left: 0px;
+        position: relative;
+        background-color: $min_color;
+        content: "";
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+      }
+    }
+  }
+  .section_cart_2 {
+    .cart_title {
+      margin: 5px 0px;
+      padding: 10px;
+      border-bottom: 1px solid;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .user_info_cart {
+      display: flex;
+      flex-direction: column;
+      font-size: 22px;
+      margin: 10px;
+    }
+    .final_price_info {
+      .price_inf_section {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        padding: 15px 10px;
+        border-top: 1px solid #000;
+
+        .price_total {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .section_cart_3 {
+    .bank_transfare {
+      .cart_title {
+        margin: 5px 0px;
+        padding: 10px;
+        border-bottom: 1px solid;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .bank_trans_info {
+        font-size: 20px;
+        padding: 10px;
+        background-color: $text_color;
+        color: #fff;
+        // text-transform: capitalize;
+        margin: 5px 0;
+      }
+    }
+  }
+  .controls {
+    display: flex;
+    justify-content: space-around;
+    min-height: 50px;
+    margin: 25px 0;
+    align-items: center;
+    .btn {
+      padding: 5px 20px;
+      font-size: 19px;
+      &:hover {
+        background-color: transparent;
+        color: $min_color;
+      }
+    }
+  }
+}
+.price_side_bar {
+  background-color: $text_color;
+  color: #fff;
+  padding: 15px;
+  .side_title {
+    font-size: 20px;
+  }
+  ul {
+    li {
+      margin: 10px 0;
+      padding: 10px;
+      &.active {
+        background-color: $min_color;
       }
     }
   }

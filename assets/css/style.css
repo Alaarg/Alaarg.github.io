@@ -483,6 +483,10 @@ header .header_slider p {
   color: #e3a92b;
 }
 
+.pagge_wraper footer .chat_services .btn:hover {
+  color: #fff;
+}
+
 .pagge_wraper .copy_write {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -801,5 +805,200 @@ header .header_slider p {
 
 .course_info .course_sidebar_info .btn_color:hover {
   background-color: transparent;
+  color: #e3a92b;
+}
+
+.cart_page {
+  margin: 25px 0;
+}
+
+.cart_page .cart_form {
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 3px solid rgba(227, 169, 43, 0.55);
+}
+
+.cart_page .cart_form .section_cart {
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cart_page .cart_form .section_cart.active {
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cart_page .section_cart_1 .cart_title {
+  margin: 5px 0px;
+  padding: 10px;
+  border-bottom: 1px solid;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cart_page .section_cart_1 .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 22px;
+  margin: 10px;
+}
+
+.cart_page .section_cart_1 .check_price {
+  font-size: 20px;
+}
+
+.cart_page .section_cart_1 .check_price .form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.cart_page .section_cart_1 .check_price .form-check-label {
+  line-height: normal;
+  margin-top: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.cart_page .section_cart_1 .check_price input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  visibility: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart_page .section_cart_1 .check_price input[type="radio"]:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  top: -2px;
+  left: 0px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.cart_page .section_cart_1 .check_price input[type="radio"]:checked:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  top: -2px;
+  left: 0px;
+  position: relative;
+  background-color: #e3a92b;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.cart_page .section_cart_2 .cart_title {
+  margin: 5px 0px;
+  padding: 10px;
+  border-bottom: 1px solid;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cart_page .section_cart_2 .user_info_cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 22px;
+  margin: 10px;
+}
+
+.cart_page .section_cart_2 .final_price_info .price_inf_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  padding: 15px 10px;
+  border-top: 1px solid #000;
+}
+
+.cart_page .section_cart_2 .final_price_info .price_inf_section .price_total {
+  font-weight: 500;
+}
+
+.cart_page .section_cart_3 .bank_transfare .cart_title {
+  margin: 5px 0px;
+  padding: 10px;
+  border-bottom: 1px solid;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cart_page .section_cart_3 .bank_transfare .bank_trans_info {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #213242;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.cart_page .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 50px;
+  margin: 25px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart_page .controls .btn {
+  padding: 5px 20px;
+  font-size: 19px;
+}
+
+.cart_page .controls .btn:hover {
+  background-color: transparent;
+  color: #e3a92b;
+}
+
+.price_side_bar {
+  background-color: #213242;
+  color: #fff;
+  padding: 15px;
+}
+
+.price_side_bar .side_title {
+  font-size: 20px;
+}
+
+.price_side_bar ul li {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.price_side_bar ul li.active {
+  background-color: #e3a92b;
 }
 /*# sourceMappingURL=style.css.map */

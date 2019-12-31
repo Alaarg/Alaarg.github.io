@@ -573,6 +573,9 @@
     margin-top: 15px;
     margin-bottom: 10px;
   }
+  .price_side_bar {
+    display: none;
+  }
 }
 
 @media (max-width: 991.98px) {
