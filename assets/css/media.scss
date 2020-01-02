@@ -65,18 +65,20 @@ $a: #e1c888;
         }
         .the_navbar {
           width: 100%;
-          transform: translate(0%, -120%);
+          transform: translate(0%, -125%);
           display: block;
           transition: all 0.3s ease-in-out;
           position: relative;
           z-index: 9999999;
+          border: 1px solid $min_Shadow_color;
           ul {
             display: block;
             align-items: center;
             text-align: center;
             overflow: hidden;
             background-color: #fff;
-
+            max-height: 299px;
+            overflow: auto;
             ul {
               display: none;
             }
@@ -333,6 +335,7 @@ $a: #e1c888;
       }
     }
   }
+
   .course_info {
     margin: 50px 0;
 

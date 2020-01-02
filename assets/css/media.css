@@ -56,13 +56,14 @@
   }
   header .nav .min_menu .the_navbar {
     width: 100%;
-    -webkit-transform: translate(0%, -120%);
-            transform: translate(0%, -120%);
+    -webkit-transform: translate(0%, -125%);
+            transform: translate(0%, -125%);
     display: block;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     position: relative;
     z-index: 9999999;
+    border: 1px solid rgba(227, 169, 43, 0.55);
   }
   header .nav .min_menu .the_navbar ul {
     display: block;
@@ -72,6 +73,8 @@
     text-align: center;
     overflow: hidden;
     background-color: #fff;
+    max-height: 299px;
+    overflow: auto;
   }
   header .nav .min_menu .the_navbar ul ul {
     display: none;
