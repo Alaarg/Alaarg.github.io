@@ -75,7 +75,7 @@ $(window).ready(function() {
     if ($(".last_step").hasClass("active")) {
       $(this).hide();
       // console.log('has');
-    } 
+    }
   });
   $(".cart_prev").click(function() {
     // let section = $(".section_cart").attr("data-cart");
@@ -95,12 +95,10 @@ $(window).ready(function() {
       .next()
       .removeClass("active");
 
-
-      if (!$(".last_step").hasClass("active")) {
-        $('.cart_next').show();
-        // console.log('has');
-      } 
-
+    if (!$(".last_step").hasClass("active")) {
+      $(".cart_next").show();
+      // console.log('has');
+    }
   });
   $('.section_cart_1 input:radio[name="herthiscourse"]').change(function() {
     if ($(this).is(":checked") || $(this).val() == "Yes") {
@@ -116,5 +114,31 @@ $(window).ready(function() {
     alert("you in 3 li");
   }
 
+  // ------------profile--------------
+  $(".list_taps li").click(function() {
+    $(this)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+
+    // console.log($(this).data('profiletab'));
+    let prodata = $(this).data("profiletab");
+    $(".profile_section_info")
+      .find(`.pro_info_sec#${prodata}`)
+      .show()
+      .siblings()
+      .hide();
+  });
+
+  $(".showval").click(function() {
+    let imgpath = $(".inputfile").val();
+    // $(".user_img")
+    //   .attr("style")
+    //   .replace("background-image :", `url(${imgpath})`);
+    alert(imgpath);
+  });
+});
+
+$(document).ready(function() {
   $(".datepicker").datepicker();
 });

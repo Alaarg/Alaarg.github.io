@@ -63,11 +63,9 @@ body {
     margin: 25px auto;
   }
 }
-.pagination_med{
-  .pagination{
-
-    a.page-link{
-      
+.pagination_med {
+  .pagination {
+    a.page-link {
       color: $min_color !important;
     }
   }
@@ -929,38 +927,147 @@ header {
       height: 300px;
       border-radius: 20px;
       position: relative;
-      .blog_ctegury{
+      .blog_ctegury {
         position: absolute;
         padding: 10px 20px;
         background-color: #fff;
         color: $min_color;
         border-radius: 30px;
         left: 15px;
-          transition: .3s ;
-          bottom: 15px;
-        &:hover{
-          transition: .3s ;
+        transition: 0.3s;
+        bottom: 15px;
+        &:hover {
+          transition: 0.3s;
           background-color: $text_color;
           color: #fff;
         }
       }
     }
-    .blog_item_title{
+    .blog_item_title {
       font-weight: bold;
       font-size: 25px;
-      margin: 15px 0 ;
+      margin: 15px 0;
     }
   }
 }
-.blog_details{
+.blog_details {
   margin: 25px 0;
-  .blog_img{
+  .blog_img {
     min-height: 400px;
     margin-bottom: 25px;
   }
-  .title_blog_details{
+  .title_blog_details {
     font-size: 25px;
     margin: 20px 0;
     font-weight: bold;
+  }
+}
+
+.profile_page {
+  .user_img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid $min_color;
+    position: relative;
+  }
+  .user_name {
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+  }
+  .user_location {
+    text-align: center;
+    margin-top: -10px;
+  }
+  .profile_info {
+    .profile_nav_taps {
+      height: 60px;
+      border: solid #f4f4f4;
+      margin-top: 50px;
+      border-width: 2px 0 3px 0;
+      display: flex;
+      align-items: center;
+      .taps_nav {
+        ul {
+          margin: 0;
+          justify-content: space-between;
+          display: flex;
+          align-items: center;
+
+          li {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+
+            &.active {
+              color: $min_color;
+              border-bottom-color: $min_color;
+            }
+          }
+        }
+      }
+    }
+
+    .profile_section_info {
+      .pro_info_sec {
+        display: none;
+        transition: 1s;
+        &:first-child {
+          display: block;
+        }
+        .event_item {
+          margin: 10px;
+        }
+      }
+
+      .user_inforomation {
+        padding: 15px 0;
+        .info_div {
+          border-bottom: 2px solid #ddd;
+          padding: 5px 0;
+        }
+        .main_title {
+          color: #999;
+          margin-top: 15px;
+          margin-bottom: 20px;
+        }
+        p {
+          margin: 3px 0;
+        }
+      }
+    }
+  }
+}
+
+.edit_profile {
+  .profile_page {
+    .user_img {
+      position: relative;
+      .upload_icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        background-color: $min_Shadow_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        flex-direction: column;
+        cursor: pointer;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
