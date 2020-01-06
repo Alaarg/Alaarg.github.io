@@ -1071,10 +1071,26 @@ header .header_slider p {
 .team_section .team_item {
   border: 1px solid rgba(227, 169, 43, 0.55);
   margin: 10px 0;
+  overflow: hidden;
+}
+
+.team_section .team_item:hover .team_img {
+  -webkit-transform: scale(1.1) rotate(-3deg);
+          transform: scale(1.1) rotate(-3deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.team_section .team_item:hover .team_title {
+  margin-top: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .team_section .team_item .team_img {
   min-height: 300px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .team_section .team_item .team_box_info {
@@ -1086,6 +1102,8 @@ header .header_slider p {
   color: #e3a92b;
   font-size: 25px;
   font-weight: bold;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .team_section .team_item .team_box_info .team_position {
