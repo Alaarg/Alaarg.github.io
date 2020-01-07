@@ -292,6 +292,10 @@ header .nav.active .the_navbar ul li a {
   color: #e3a92b;
 }
 
+header .nav.active .the_navbar .uer_info {
+  color: #000;
+}
+
 header .header_slider .indecators_style li {
   background-color: #e3a92b;
   width: 15px;
@@ -385,6 +389,7 @@ header .header_slider p {
   border-style: solid;
   border-color: transparent #fff transparent transparent;
   border-width: 85px 474px 0px 0px;
+  z-index: 1;
 }
 
 .pagge_wraper .cors_item .cors_body .cors_img .cors_price {
@@ -400,6 +405,7 @@ header .header_slider p {
   bottom: 45px;
   font-weight: bold;
   overflow: hidden;
+  z-index: 2;
 }
 
 .pagge_wraper .cors_item .cors_body .cors_info {
@@ -449,6 +455,34 @@ header .header_slider p {
       -ms-flex-align: center;
           align-items: center;
   border-top: 1px solid #213242;
+}
+
+.pagge_wraper .cors_item .cors_body .course_status {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.pagge_wraper .cors_item .cors_body .course_status.finish {
+  background-color: rgba(220, 53, 70, 0.66);
+}
+
+.pagge_wraper .cors_item .cors_body .course_status.corrent {
+  background-color: rgba(40, 167, 69, 0.6);
 }
 
 .pagge_wraper .banner_sec .banner {
@@ -1077,20 +1111,20 @@ header .header_slider p {
 .team_section .team_item:hover .team_img {
   -webkit-transform: scale(1.1) rotate(-3deg);
           transform: scale(1.1) rotate(-3deg);
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .team_section .team_item:hover .team_title {
   margin-top: 5px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .team_section .team_item .team_img {
   min-height: 300px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .team_section .team_item .team_box_info {
@@ -1102,8 +1136,8 @@ header .header_slider p {
   color: #e3a92b;
   font-size: 25px;
   font-weight: bold;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .team_section .team_item .team_box_info .team_position {
@@ -1192,7 +1226,7 @@ header .header_slider p {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  margin-top: -100px;
+  margin-top: -50px;
   margin-left: auto;
   margin-right: auto;
   border: 5px solid #e3a92b;
@@ -1288,10 +1322,21 @@ header .header_slider p {
 }
 
 .edit_profile .profile_page .user_img {
+  margin-bottom: 25px;
   position: relative;
 }
 
+.edit_profile .profile_page .user_img:hover .upload_icon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .edit_profile .profile_page .user_img .upload_icon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   position: absolute;
   top: 0;
   left: 0;
@@ -1299,9 +1344,6 @@ header .header_slider p {
   bottom: 0;
   border-radius: 50%;
   background-color: rgba(227, 169, 43, 0.55);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1313,10 +1355,32 @@ header .header_slider p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: none;
   cursor: pointer;
 }
 
 .edit_profile .profile_page .user_img .upload_icon span {
   font-size: 18px;
+}
+
+.edit_profile_body input {
+  margin: 5px 0;
+  border-color: #e3a92b;
+}
+
+.edit_profile_body .accout_info {
+  margin: 10px 0 20px 0;
+  border-bottom: 3px solid #ddd;
+  padding: 10px;
+}
+
+.edit_profile_body .submit_edit_profile {
+  margin: 10px 0 20px 0;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.edit_profile_body .submit_edit_profile:hover {
+  background: transparent;
 }
 /*# sourceMappingURL=style.css.map */

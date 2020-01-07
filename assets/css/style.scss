@@ -249,6 +249,10 @@ header {
           }
         }
       }
+
+      .the_navbar .uer_info {
+        color: #000;
+      }
     }
   }
   .header_slider {
@@ -331,7 +335,9 @@ header {
           position: absolute;
           border-style: solid;
           border-color: transparent #fff transparent transparent;
-          border-width: 85px 474px 0px 0px;
+          border-width: 85px 474px 0px 0px; 
+          z-index: 1;
+
         }
         .cors_price {
           position: absolute;
@@ -346,6 +352,8 @@ header {
           bottom: 45px;
           font-weight: bold;
           overflow: hidden;
+          z-index: 2;
+
         }
       }
       .cors_info {
@@ -382,6 +390,27 @@ header {
 
         border-top: 1px solid $text_color;
       }
+.course_status{
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+font-weight: bold;
+color: #fff;
+&.finish{
+  background-color: rgba(220, 53, 70, 0.66);
+}
+&.corrent{
+  background-color: rgba(40, 167, 69, 0.6);
+}
+
+}
+
     }
   }
 
@@ -884,20 +913,18 @@ header {
     overflow: hidden;
     &:hover {
       .team_img {
-        transform: scale(1.1)rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg);
 
-        transition: .5s;
+        transition: 0.5s;
       }
-      .team_title{
+      .team_title {
         margin-top: 5px;
-        transition: .5s;
-
+        transition: 0.5s;
       }
     }
     .team_img {
       min-height: 300px;
-      transition: .5s;
-
+      transition: 0.5s;
     }
     .team_box_info {
       padding: 10px;
@@ -906,8 +933,7 @@ header {
         color: $min_color;
         font-size: 25px;
         font-weight: bold;
-        transition: .5s;
-      
+        transition: 0.5s;
       }
       .team_position {
         text-align: center;
@@ -985,7 +1011,7 @@ header {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    margin-top: -100px;
+    margin-top: -50px;
     margin-left: auto;
     margin-right: auto;
     border: 5px solid $min_color;
@@ -1066,8 +1092,17 @@ header {
 .edit_profile {
   .profile_page {
     .user_img {
+      margin-bottom: 25px;
       position: relative;
+      &:hover .upload_icon{
+
+        transition: 0.3s;
+        display: flex;
+
+      }
+     
       .upload_icon {
+        transition: 0.3s;
         position: absolute;
         top: 0;
         left: 0;
@@ -1075,16 +1110,40 @@ header {
         bottom: 0;
         border-radius: 50%;
         background-color: $min_Shadow_color;
-        display: flex;
         align-items: center;
         justify-content: center;
         font-size: 50px;
         flex-direction: column;
+        display: none;
         cursor: pointer;
         span {
           font-size: 18px;
         }
       }
     }
+  }
+}
+
+.edit_profile_body{
+
+  input{
+    margin: 5px 0;
+    border-color: #e3a92b;
+  }
+  .accout_info{
+    margin: 10px 0 20px 0;
+    border-bottom: 3px solid #ddd;
+    padding: 10px;
+  }
+  .submit_edit_profile{
+    margin: 10px 0 20px 0 ;
+    padding: 10px 20px;
+    font-size: 18px;
+    &:hover{
+      background: transparent;
+    }
+  }
+  .edit_password{
+    
   }
 }

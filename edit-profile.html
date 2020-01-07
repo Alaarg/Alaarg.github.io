@@ -56,11 +56,11 @@
                             <li><a href="library.html">Library </a></li>
                             <li><a href="team.html">Team </a></li>
                             <ul class="menu_list list-unstyled  ">
-                              <li><a class="" href="login.html"><span>login</span> </a></li>
-                              <li><a class="btn btn_color" href="signup.html"><span>register</span> </a></li>
-              
+                                <li><a class="" href="login.html"><span>login</span> </a></li>
+                                <li><a class="btn btn_color" href="signup.html"><span>register</span> </a></li>
+
+                            </ul>
                         </ul>
-                      </ul>
 
                     </div>
 
@@ -74,7 +74,7 @@
         <div class="header_banner dv_bkground_cover">
             <div class="over_ly">
 
-                <h1 class="banner_title"></h1>
+                <h1 class="banner_title">Edit Profile</h1>
 
             </div>
         </div>
@@ -83,28 +83,156 @@
 
     <div class="pagge_wraper">
         <div class="edit_profile">
-            <form action="">
+            <div class="container">
 
-                <div class="profile_page">
-                    <div class="user_img dv_bkground_cover"
-                        style="background-image: url(assets/images/course_bg1.jpg);">
+                <form action="">
 
-                        <label for="file">
-                            <input type="file" name="file" id="file" class="inputfile d-none" value="">
-                            <div class="upload_icon">
-                                <i class="fa fa-camera" aria-hidden="true"></i>
-                                <span>
-                                    upload img
-                                </span>
-                            </div>
-                        </label>
-                        
-                        
+                    <div class="profile_page">
+                        <div class="user_img user_upload_img dv_bkground_cover"
+                            style="background-image: url(assets/images/course_bg1.jpg);">
+
+                            <label for="file_input">
+                                <input type="file" name="file" id="file_input" class="inputfile d-none" value=""
+                                    accept="image/*">
+                                <div class="upload_icon">
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                    <span>
+                                        upload img
+                                    </span>
+                                </div>
+                            </label>
+
+
+                        </div>
                     </div>
-                </div>
-            </form>
+
+                    <div class="edit_profile_body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <input type="text" class="form-control" name="title_name" placeholder="Title" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>English Name</label>
+                                    <input type="text" class="form-control" name="english_nmae"
+                                        placeholder="English Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Arabic Name</label>
+                                    <input type="text" class="form-control" name="arabic_name"
+                                        placeholder="Arabic Name" required>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Profession</label>
+                                    <input type="text" class="form-control" name="profession" placeholder="Profession" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Spaeciality</label>
+                                    <input type="text" class="form-control" name="spaeciality"
+                                        placeholder="spaeciality" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Institution</label>
+                                    <input type="text" class="form-control" name="institution"
+                                        placeholder="Institution" required>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <input type="text" class="form-control" name="gender" placeholder="Gender" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Position</label>
+                                    <input type="text" class="form-control" name="position" placeholder="Position" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>professional Classification Number</label>
+                                    <input type="text" class="form-control" name="classification"
+                                        placeholder="professional Classification Number" required>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Nationality</label>
+                                    <input type="text" class="form-control" name="nationality"
+                                        placeholder="Nationality" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Contry</label>
+                                    <input type="text" class="form-control" name="contry" placeholder="Contry" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input type="text" class="form-control" name="city" placeholder="City" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <h3 class="accout_info">Account Info</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4 edit_password">
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    
+                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <label>Mobile</label>
+                                    <input type="text" class="form-control" name="mobile" placeholder="Mobile" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+
+                                <input class="btn btn_color submit_edit_profile" type="submit" value="Update Profile"  required>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
         </div>
-        <button class=" btn btn_color showval">upload</button>
 
 
 

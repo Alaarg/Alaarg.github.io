@@ -130,15 +130,35 @@ $(window).ready(function() {
       .hide();
   });
 
-  $(".showval").click(function() {
-    let imgpath = $(".inputfile").val();
-    // $(".user_img")
-    //   .attr("style")
-    //   .replace("background-image :", `url(${imgpath})`);
-    alert(imgpath);
-  });
+  $('input[type=file]').change(function () {
+    console.log(this.files[0].mozFullPath);
+});
+
+
+  // $("button.showval").click(function() {
+  //   let imgpath = $(".inputfile").val().replace('C:\\fakepath\\','');
+
+  //   let path = 'assets/images/course_bg1.jpg';
+  //   $(".user_img").attr('style',`background-image:url(${imgpath})`);
+
+  //   // alert(imgpath);
+  // });
+
+  $("#file_input").change(function () {
+    var files = !!this.files ? this.files : [];
+    if (!files.length || !window.FileReader)
+        return;
+    if (/^image/.test(files[0].type)) {
+        var reader = new FileReader();
+        reader.readAsDataURL(files[0]);
+        reader.onloadend = function () {
+            $(".user_upload_img").css("background-image", "url(" + this.result + ")");
+        };
+    }
+});
+
 });
 
 $(document).ready(function() {
-  $(".datepicker").datepicker();
+  // $(".datepicker").datepicker();
 });
